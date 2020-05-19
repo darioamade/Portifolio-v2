@@ -1,11 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
-
-/*
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -181,8 +176,9 @@ input, select, textarea {
 
 	  .top {
 		  grid-column: 3 / span 9;
-		  grid-row: 4 / span 4;
+		  grid-row: 4 / span 3;
 		  display:flex;
+		  max-width: 1680px;
 		  justify-content:flex-start;
 		  align-items: flex-end;
 		 
@@ -200,33 +196,72 @@ input, select, textarea {
 	  }
 
 	  .circle {
-		grid-column: 10 / span 1;
-		grid-row: 8 / span 1;
+		grid-column: 11 / span 1;
+		grid-row: 6 / span 1;
+		max-width: 1680px;
 		display:flex;
 		justify-content:center;
 		align-items: center;
 	  }
 	  .txt-des {
-		grid-column: 11 / span 2;
-		grid-row: 8 / span 1;
-
+		grid-column: 12 / span 2;
+		grid-row: 6 / span 1;
+		max-width: 1680px;
 		display:flex;
 		justify-content:center;
 		align-items: center;
 	  }
+	  @media  screen and (max-width:1091px) {
+	
+		.circle {
+			grid-column: 10 / span 1;
+			grid-row: 5 / span 1;
+		}
+		.txt-des {
+			grid-column: 12 / span 2;
+			grid-row: 5 / span 1;
+	
+		
+		  }
+	  }
+	  @media  screen and (max-width:569px) {
+	
+		.circle {
+			grid-column: 5 / span 1;
+			grid-row: 5 / span 1;
+		}
+		.txt-des {
+			grid-column: 7 / span 2;
+			grid-row: 5 / span 1;
+		  }
+	  }
+	  @media  screen and (max-width:468px) {
+	
+		.circle {
+			display:none;
+		}
+		.txt-des {
+			grid-column: 8 / span 2;
+			grid-row: 5 / span 1;
+		  }
+	  }
+
 
 
 	  .txt-des h2 {
 		font-family: 'Montserrat', sans-serif;
-		font-size: 2rem;
+		font-size: 1.8rem;
 		font-weight:500;
 		line-height: 1;
 		letter-spacing: 2px;
 		color: #fff;
 		text-transform:initial;
+	  }
 
-
-
+	  @media  screen and (max-width:1091px) {
+		.txt-des h2 {
+			font-size: 1.6rem;
+		}
 	  }
 
 	  /*   font-family: 'Montserrat', sans-serif;
@@ -242,12 +277,39 @@ input, select, textarea {
 		height: 4rem;
 		width: 4rem;
 		fill: rgb(255, 255, 255);
-
 	  }
+	  .search__iconpdf{
+		height: 1.2rem;
+		width: 1.2rem;
+		fill: rgb(205, 35, 35);
+	  }
+	  .search__iconpdf:hover {
+		fill: rgb(255, 255, 255);
+	  }
+
+
+	  @media  screen and (max-width:600px) {
+		.search__icon {
+			height: 3rem;
+			width: 3rem;
+		}
+		.txt-des h2 {
+			font-size: 1.4rem;
+		}
+	  }
+
+	  @media  screen and (max-width:486px) {
+		.search__icon {
+			height: 2.3rem;
+			width: 2.3rem;
+		}
+		.txt-des h2 {
+			font-size: 1.2rem;
+		}
+	  }
+
 		#logox{ 
-			background-color: rgb(0, 0, 0);
 			animation: fill .5s ease forwards 4.5s;
-			
 		}
 
 
@@ -3013,10 +3075,13 @@ input, select, textarea {
 	}
 
 		ul.icons li {
+		
 			display: inline-block;
 			padding: 0 0.5rem 0 0;
 			vertical-align: middle;
 		}
+		
+		
 
 			ul.icons li:last-child {
 				padding-right: 0;
@@ -3990,7 +4055,196 @@ input, select, textarea {
 		}
 
 /* Main */
+/*----------------------------------------------*/
+#main .postpost {
+	height: 120vh;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(16, 1fr);
 
+}
+.txt {
+	grid-column:  1 / -1;
+	grid-row: 1 / span 6 ; 
+	text-align: center;
+}
+
+.txt .hit {
+	font-family: 'Alfa Slab One', cursive;
+	font-weight: 700;
+	font-size: 6.5rem;
+	line-height: 1.7;
+	letter-spacing: 20px;
+	text-transform: uppercase;
+	color: rgba(57, 57, 57, 0.308);
+	z-index: -1;
+}
+
+@media screen and (max-width: 1075px) {
+	.txt .hit {
+		font-size: 5.5rem;
+		letter-spacing: 2rem;
+	}
+}
+
+@media screen and (max-width: 911px) {
+	.txt .hit {
+		font-size: 4.5rem;
+		letter-spacing: 1.5rem;
+	}
+}
+@media screen and (max-width: 755px) {
+	.txt .hit {
+		font-size: 3.5rem;
+		letter-spacing: 1rem;
+	}
+}
+
+
+@media screen and (max-width: 559px) {
+	.txt .hit {
+		font-size: 2.5rem;
+		letter-spacing: 1rem;
+	}
+	.txt {
+		grid-row: 2 / span 6 ; }
+}
+@media screen and (max-width: 410px) {
+	.txt .hit {
+		font-size: 2.5rem;
+		letter-spacing: .5rem;
+	}
+}
+
+
+
+.myphoto {
+	background-image: url(/images/IMG_0102.JPG);  
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	grid-column: 5 / span 4;
+	grid-row: 4 / span 6; 
+
+	border-radius: 50%; 
+	z-index: 1;
+	box-shadow: 0 2rem 5rem rgba(0,0,0,.2);
+}
+
+@media screen and (max-width: 867px) {
+	.myphoto {
+		grid-column: 5 / span 4;
+		grid-row: 4 / span 5; 
+	}
+}
+@media screen and (max-width: 755px) {
+	.myphoto {
+		grid-column: 4 / span 6;
+		grid-row: 3 / span 6; 
+	}
+}
+@media screen and (max-width: 627px) {
+	.myphoto {
+		grid-column: 4 / span 6;
+		grid-row: 3 / span 5; 
+	}
+}
+@media screen and (max-width: 525px) {
+	.myphoto {
+		grid-column: 4 / span 6;
+		grid-row: 3 / span 4; 
+	}
+}
+@media screen and (max-width: 373px) {
+	.myphoto {
+		grid-column: 4 / span 6;
+		grid-row: 3 / span 3; 
+	}
+}
+
+
+.name {
+	grid-column: 5 / span 4;
+	grid-row: 10 / span 1 ; 
+	z-index: 10;
+}
+@media screen and (max-width: 857px) {
+	.name {
+		grid-row: 9 / span 1 ;}
+}
+
+@media screen and (max-width: 637px) {
+	.name {
+		grid-column: 3 / span 8;
+	}
+}
+@media screen and (max-width: 625px) {
+	.name {
+		grid-row: 8 / span 1
+	}
+}
+@media screen and (max-width: 526px) {
+	.name {
+		grid-row: 7 / span 1
+	}
+}
+
+.pp {
+	font-family: 'Montserrat';
+	text-align: center;
+	font-weight: 600;
+	font-size: 1.4rem;
+	letter-spacing: 2px;
+	color: rgb(67, 64, 64);
+	text-transform: uppercase;
+}
+
+.some-txt {
+	grid-column: 1 / span 12;
+	grid-row: 12 / -1 ; 
+	padding: 0 4rem;
+}
+@media screen and (max-width: 953px) {
+	.some-txt {
+		grid-row: 11 / -1 ; 
+		padding: 0 2rem;
+	}
+}
+@media screen and (max-width: 841px) {
+	.some-txt {
+		grid-row: 10 / -1 ; 
+		padding: 0 2rem;
+	}	
+}
+
+@media screen and (max-width: 625px) {
+	.some-txt {
+		grid-row: 9 / -1 ; 
+		padding: 0 1rem;		
+	}	
+}
+
+@media screen and (max-width: 525px) {
+	.some-txt {
+		grid-row: 8 / -1 ; 
+		padding: 0 1rem;
+		}
+	}
+
+.ppp {
+	font-family: 'Montserrat';
+	font-size: 1.4rem;
+	font-weight: 400;
+	line-height: 1.6;
+	color: rgb(67, 64, 64);
+	letter-spacing: 2px;
+	text-transform: initial;
+}
+
+
+
+
+/*----------------------------------------------*/
 	#main {
 		background-color: #ffffff;
 		position: relative;
@@ -4181,6 +4435,10 @@ input, select, textarea {
 
 		}
 
+		#initial{
+			text-transform: initial;
+		}
+
 /* Footer */
 
 	#footer {
@@ -4203,7 +4461,7 @@ input, select, textarea {
 		}
 
 		#footer a {
-			color: #717981;
+			color: #040404;
 			border-bottom-color: rgba(113, 121, 129, 0.5);
 		}
 
@@ -4934,3 +5192,12 @@ input, select, textarea {
 	#fill1 {
 		fill:rgb(31, 31, 208);
 	}
+
+
+		#allcenter {
+			text-align: center;
+		}
+
+		#txt3{
+			text-transform:initial;
+		}
