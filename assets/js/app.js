@@ -4,11 +4,11 @@ window.addEventListener('load', () => {
     });
 
 
-/*
+
     const logox = document.querySelectorAll('#logox path');
 
 	for(let i = 0; i < logox.length; i++) {
 		console.log(`Letter ${i} is ${logox[i].getTotalLength()}`);
 		
 	}
-		*/
+		
