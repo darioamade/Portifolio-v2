@@ -3533,9 +3533,32 @@ body.is-preload #wrapper.fade-in:before {
   text-align: center;
 }
 
-#centerx {
-  text-align: center;
+#centerx,
+#centerx-1 {
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 400;
+	text-align: start;
+	letter-spacing: 0px;
+	line-height:1.6;
+	width:70%;
+	margin: 0 auto;
+	margin-bottom: 2rem;
 }
+
+#centerx-1 {
+	width:100%;
+	font-size: .8rem;
+
+}
+@media (max-width:550px){
+#centerx {
+	/* text-align: center;
+	letter-spacing: 1px; */
+	width:100%;
+	}
+}
+
 
 #intro + #header {
   margin-top: -20rem;
